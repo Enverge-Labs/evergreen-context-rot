@@ -8,6 +8,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
 from models.providers.openai import OpenAIProvider
 from models.providers.anthropic import AnthropicProvider
 from models.providers.google import GoogleProvider
+from models.providers.llama import LlamaProvider
 
 dotenv.load_dotenv()
 
@@ -18,6 +19,8 @@ def get_provider(provider_name: str, model_name: str = None):
         return AnthropicProvider()
     elif provider_name.lower() == 'google':
         return GoogleProvider(model_name)
+    elif provider_name.lower() == 'llama':
+        return LlamaProvider()
     else:
         raise ValueError(f"Unknown provider: {provider_name}. Available providers: openai, anthropic, google")
 
@@ -26,7 +29,7 @@ def main():
     parser = argparse.ArgumentParser(description='Run providers')
     
     parser.add_argument('--provider', type=str, required=True, 
-                       choices=['openai', 'anthropic', 'google'],
+                       choices=['openai', 'anthropic', 'google', 'llama'],
                        help='Provider to use')
     parser.add_argument('--input-path', type=str, required=True,
                        help='Path to input CSV file')
