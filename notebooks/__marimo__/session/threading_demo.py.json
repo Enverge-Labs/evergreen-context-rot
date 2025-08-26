@@ -1,0 +1,73 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.14.16"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ITjX",
+      "code_hash": "97afdec02d86f9a48dc003e8594deac1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">This is an experiment to understand how multi-threading works in Marimo.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "33a684990a490ac838559b23d673924d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "CRLf",
+      "code_hash": "e2b7650cd8948396d315e053009647c6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "kmjh",
+      "code_hash": "de70938849b75d3db63bba421c93e018",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "application/json": "[\"Thread Worker-1 starting...\", \"Thread Worker-2 starting...\", \"Thread Worker-3 starting...\", \"Thread Worker-2 finished after 3 seconds\", \"Thread Worker-3 finished after 3 seconds\", \"Thread Worker-1 finished after 8 seconds\"]"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}
