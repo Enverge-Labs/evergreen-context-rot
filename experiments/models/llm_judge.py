@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import json
 from .providers.openai import OpenAIProvider
+from .providers.llama import LlamaProvider
 import time
 import concurrent.futures
 
@@ -12,7 +13,8 @@ class LLMJudge:
         self.output_column = output_column
         self.question_column = question_column
         self.correct_answer_column = correct_answer_column
-        self.provider = OpenAIProvider()
+        # self.provider = OpenAIProvider()
+        self.provider = LlamaProvider()
         self.distractors_text = self._load_distractors(distractors_file) if distractors_file else ""
     
     def _load_distractors(self, distractors_file: str) -> str:
@@ -119,8 +121,8 @@ class LLMJudge:
         for i, batch_indices in enumerate(batches):
             self._process_for_evaluation(input_to_process, output_df, batch_indices, output_path)
             if i < len(batches) - 1:
-                print("Waiting 60 seconds")
-                time.sleep(60)
+                print("Waiting 10 seconds")
+                time.sleep(10)
 
     def analyze_distractors(self, input_path: str, output_path: str, max_context_length: int, max_tokens_per_minute: int, output_column_name: str = "distractor_label") -> pd.DataFrame:
         input_df = pd.read_csv(input_path)
@@ -157,5 +159,5 @@ class LLMJudge:
         for i, batch_indices in enumerate(batches):
             self._process_for_evaluation(input_to_process, output_df, batch_indices, output_path, output_column_name)
             if i < len(batches) - 1:
-                print("Waiting 60 seconds")
-                time.sleep(60)
+                print("Waiting 10 seconds")
+                time.sleep(10)

@@ -131,5 +131,5 @@ class BaseProvider(ABC):
         for i, batch_indices in enumerate(batches):
             self.process_batch(input_to_process, output_df, batch_indices, model_name, output_path, input_column, output_column)
             if i < len(batches) - 1:
-                print("Waiting 60 seconds")
-                time.sleep(60)
+                print("Waiting 10 seconds")
+                time.sleep(10)
