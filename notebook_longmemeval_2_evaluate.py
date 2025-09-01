@@ -87,13 +87,15 @@ def _(mo):
 @app.cell
 def _(DEFAULT_PROMPT):
     # Configuration inputs
-    input_path = "results/llama_3_2_longmemeval_focused_results.csv"
-    output_path = "results/llama_3_2_longmemeval_focused_evaluated.csv"
+    # input_path = "results/llama_3_2_longmemeval_focused_results.csv"
+    # output_path = "results/llama_3_2_longmemeval_focused_evaluated.csv"
     # input_path = "results/llama_3_2_longmemeval_full_results.csv"
     # output_path = "results/llama_3_2_longmemeval_full_evaluated.csv"
+    input_path = "results/gpt_oss_20b_longmemeval_focused_results.csv"
+    output_path = "results/gpt_oss_20b_longmemeval_focused_evaluated.csv"
 
-
-    model_name = "llama3.2"
+    # model_name = "llama3.2"
+    model_name = "gpt-oss:20b"
 
     output_column = "output"
 

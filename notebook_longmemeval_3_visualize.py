@@ -69,12 +69,17 @@ def _(pd, plt):
 
 @app.cell
 def _():
-    focused_path = "results/llama_3_2_longmemeval_focused_evaluated.csv"
-    full_path = "results/llama_3_2_longmemeval_full_evaluated.csv"
     # focused_path = "results/gpt_4_1_longmemeval_focused_evaluated.csv"
     # full_path = "results/gpt_4_1_longmemeval_full_evaluated.csv"
+    focused_path = "results/llama_3_2_longmemeval_focused_evaluated.csv"
+    full_path = "results/llama_3_2_longmemeval_full_evaluated.csv"
+    # focused_path = "results/gpt_oss_20b_longmemeval_focused_evaluated.csv"
+    # full_path = "results/gpt_oss_20b_longmemeval_full_evaluated.csv"
+
     model_name = "llama3.2"
     output_path = "results/llama_3_2_longmemeval.png"
+    # model_name = "gpt-oss:20b"
+    # output_path = "results/gpt_oss_20b_longmemeval.png"
     return focused_path, full_path, model_name, output_path
 
 
