@@ -1,0 +1,10 @@
+# OS + Python
+**/.DS_Store
+**.pyc
+**/__pycache__
+venv
+# Configs
+.env
+# Project specific
+data
+results

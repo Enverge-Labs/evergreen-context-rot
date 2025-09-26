@@ -1,0 +1,350 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.16.2"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "4ad44a78c101ae5caf06fcb468822fc8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><h1 id=\"evergreen-context-rot\">Evergreen Context Rot</h1>\n<h2 id=\"interactive-deep-dive\">Interactive Deep-dive</h2>\n<span class=\"paragraph\">The longest conversations reveal the deepest truths about memory.\n<a href=\"https://research.trychroma.com/context-rot\" rel=\"noopener\" target=\"_blank\">Chroma's recent context rot research</a> shows how language models falter as input length grows. One question stands apart: <strong>how do newer, open-source models perform?</strong></span>\n<span class=\"paragraph\">This is more than a needle-in-haystack test.\nThis is different.</span>\n<span class=\"paragraph\">Using <strong>LongMemEval</strong>, we test sustained dialogue. Context accumulates like sediment. Earlier exchanges shape later understanding. Models face what humans do daily: maintaining coherent conversation across thousands of turns.</span>\n<span class=\"paragraph\">The results reveal the fundamental limits of artificial memory in real conversations. Memory fades.</span>\n<span class=\"paragraph\">This interactive report expands the original research. Test how newer, open-source models perform. Hence \"evergreen\".</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "0c165ab31cc2054b135c9afdc14dd7b4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><br /><br /></span>\n<h2 id=\"experiment\">Experiment</h2>\n<span class=\"paragraph\"><strong>LongMemEval</strong> is a long-context benchmark for conversational question-answering. <a href=\"https://github.com/xiaowu0162/LongMemEval\" rel=\"noopener\" target=\"_blank\">Full paper can be found here</a>.</span>\n<span class=\"paragraph\">Ideally, models receive only relevant parts to focus on reasoning. Adding irrelevant context forces them to identify relevance first. The model performs two tasks simultaneously.</span>\n<span class=\"paragraph\">Given a chat history between user and LLM, the task is answering questions about parts of that history.</span>\n<span class=\"paragraph\"><br /></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "42da415ca4ca860b85cc5693d57a4757",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><br /><br /></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "0337815f14b9200f73556e672da93bfc",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">The steps, tools, and visualisations below run a full experimental cycle.\n<br /><br /></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "1842955bb7a21a78ff73ecaaf350ead5",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><br /><br /></span>\n<h2 id=\"step-1-run\">Step 1. Run</h2>\n<span class=\"paragraph\">Model and dataset selection</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "16fd7793ab22d9b2eb41a8115e32daf4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">_</span>\n<h2 id=\"step-2-evaluate\">Step 2. Evaluate</h2>\n<span class=\"paragraph\">Evaluate outcomes for each model and dataset combo.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "a1670ab76bca601649975e09d61f035f",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">_</span>\n<h2 id=\"step-3-visualize\">Step 3. Visualize</h2>\n<span class=\"paragraph\">See comparison charts of the outcomes.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "pHFh",
+      "code_hash": "3de16b4694be7037f6fd2bd83b0700d3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><br /><br /></span>\n<h2 id=\"faq\">FAQ</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TRpd",
+      "code_hash": "18dfc8144ebe86a73b824ed05d6b0914",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><br /><br /></span>\n<h2 id=\"conclusion\">Conclusion</h2>\n<span class=\"paragraph\">Our experiments show LLMs do not maintain consistent performance across input lengths. Even on simple tasks like non-lexical retrieval or text replication, performance becomes less uniform as input length grows.</span>\n<span class=\"paragraph\">Our results highlight the need for rigorous long-context evaluation beyond current benchmarks. Context engineering matters. Whether relevant information is present in a model's context is not everything. How that information is presented matters more. Even the most capable models are sensitive to this. Effective context engineering is essential for reliable performance.</span>\n<span class=\"paragraph\">See the source <a href=\"https://github.com/enverge-ai/context-rot\" rel=\"noopener\" target=\"_blank\">code on GitHub</a>.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TXez",
+      "code_hash": "5f40471b0b86545cf0139ebbb3256fa6",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\"><br /><br /></span>\n<h2 id=\"annexes\">Annexes</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "370a98057f572f3b2cc6c8c6cc88f110",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "03d0f1fb83b03f0f25e2e18e4d3bfea9",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "418ae0572588ecebefb2be36e5eac84b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "a87d644f0696f344b1e27c3ca60866e3",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "f32e439cb6550308d13909b14c49abed",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "13630d84ab55661d5bfb5a8fac09f567",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "07c49c94f498cbdfc40c613be7628a65",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "d288c476cea8ce8aeb68e4ebbde32ad3",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "4ad574100ac592aaa0aca6db1576959a",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "b154dd789b970e638b7a70b66a507791",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "05b74875de0d5025f821caee66b4e009",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "3d168af4fcb42698516a1cb72806ce8b",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "fa7418e970d60e9a55945142ed508f32",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "2b5ab4e960441b593ed501e7b8235697",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "ef633ab7a3a2b70dea4f7c4236037ebd",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "778ace0a4e29e39b65e470c9a6506c2d",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "6d416302dc1f5c2411a8f333334d3abe",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "dbf4e04e98894cbf459f939a78eafddb",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "5b199d7d3db9e9cf56995a2700f8e9a8",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "nHfw",
+      "code_hash": "385b30d03d78d10209058886145a7051",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "xXTn",
+      "code_hash": "ab1e5d374d94051c5f951951dcacbb16",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "AjVT",
+      "code_hash": "97ae38fabf8e72a8764ed46eca2cc7f5",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "NCOB",
+      "code_hash": "3d15f3d9068415b22c29b7b564972864",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-accordion data-labels='[&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol&gt;&#92;n&lt;li&gt;How can I run this on multiple models to compare results?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;2&#92;&quot;&gt;&#92;n&lt;li&gt;Are there any other techniques similar to LongMemEval to consider?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;3&#92;&quot;&gt;&#92;n&lt;li&gt;How can I add my own datasets?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;4&#92;&quot;&gt;&#92;n&lt;li&gt;What&#x27;s the best person to contact for more info in this area?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;5&#92;&quot;&gt;&#92;n&lt;li&gt;How can I contribute to this project?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;6&#92;&quot;&gt;&#92;n&lt;li&gt;How are the models run inside this notebook?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;7&#92;&quot;&gt;&#92;n&lt;li&gt;Can this run on closed-source models?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;,&quot;&lt;span class=&#92;&quot;markdown prose dark:prose-invert&#92;&quot;&gt;&lt;ol start=&#92;&quot;8&#92;&quot;&gt;&#92;n&lt;li&gt;Is this open-source and can I see how this is computed?&lt;/li&gt;&#92;n&lt;/ol&gt;&lt;/span&gt;&quot;]' data-multiple='false'><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">There's a constant named <code>OLLAMA_MODELS</code> in the <code>constants.py</code> file. You can add more models to the list and run the experiment again. This project uses Ollama to pull and run the models on local GPUs.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">Several variations of Needle in a Haystack exist, including one with a <a href=\"https://aclanthology.org/2025.wraicogs-1.2/\" rel=\"noopener\" target=\"_blank\">semantic match</a>. The <a href=\"https://arxiv.org/html/2504.14218v1\" rel=\"noopener\" target=\"_blank\">Repeated Words</a> task tests model performance on replicating repeated word sequences. The original report expands on these.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">You can add your own datasets to the <code>data/</code> folder and run the experiment again. The datasets should be in the same format as the <code>cleaned_longmemeval_s_focused.csv</code> and <code>cleaned_longmemeval_s_full.csv</code> files.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">You can contact <a href=\"mailto:tudor@enverge.ai\">Tudor</a> for more info.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">You can contribute to this project by <a href=\"https://github.com/Enverge-Labs/context-rot\" rel=\"noopener\" target=\"_blank\">forking the repository</a> and submitting a pull request.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">The notebook is GPU-native. It runs in an environment which requires no additional setup. A GPU is configured for both read-only and editable versions.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">No. The original Context Rot paper and Chroma's report can. See their source code.</span></span></div><div><span class=\"markdown prose dark:prose-invert\"><span class=\"paragraph\">Yes, this project is open-source and you can see the code <a href=\"https://github.com/Enverge-Labs/context-rot\" rel=\"noopener\" target=\"_blank\">here</a>. The code is organized into multiple notebooks and Python modules which store common components. The notebooks are built with <a href=\"https://marimo.io/\" rel=\"noopener\" target=\"_blank\">Marimo</a>.</span></span></div></marimo-accordion>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aqbW",
+      "code_hash": "a87d644f0696f344b1e27c3ca60866e3",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "dNNg",
+      "code_hash": "7aaf18ebb3fff78b310f5c0e41fd1e44",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "yCnT",
+      "code_hash": "3bd9bedb0638adb436a9fb5397603e78",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "wlCL",
+      "code_hash": "a30a512e675435689057c422d2a9d9c9",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "kqZH",
+      "code_hash": "f933906570eb0b95d1c8c4a2a6091159",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "wAgl",
+      "code_hash": "b3547f3bfceba965932c5b3ac67bfbde",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "rEll",
+      "code_hash": "0778c50fbc335b7919c814a1750cf922",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "dGlV",
+      "code_hash": "0a37c39d6e5a40c59010cd2b5116c1d6",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "SdmI",
+      "code_hash": "4c8032e4c614bcfa1834212ed546cabd",
+      "outputs": [],
+      "console": []
+    },
+    {
+      "id": "lgWD",
+      "code_hash": "91845e8adab9c1893b7e9113fcb04477",
+      "outputs": [],
+      "console": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+/* Custom styles for tall cells */
+#cell-ROlb,
+#cell-ecfG {
+    max-height: 30rem;
+    overflow: scroll;
+    background: var(--secondary);
+}
