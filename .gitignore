@@ -6,5 +6,5 @@ venv
 # Configs
 .env
 # Project specific
-data
-results
+# data
+# results

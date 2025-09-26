@@ -1,4 +1,4 @@
-# Evergreen Context Rot: 
+# Evergreen Context Rot
 
 This repository extends the results of Chroma's [Context Rot](https://research.trychroma.com/context-rot) to include newer, open-source models.
 Based on Ollama, this project is structured as a editable notebook + read-only app, powered by Marimo.
