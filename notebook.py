@@ -13,7 +13,7 @@ def _(mo):
     mo.md(
         r"""
     # Evergreen Context Rot
-    ## Interactive Deep-dive
+    ## Deep-dive playground
 
     The longest conversations reveal the deepest truths about memory. 
     [Chroma's recent context rot research](https://research.trychroma.com/context-rot) shows how language models falter as input length grows. One question stands apart: **how do newer, open-source models perform?**
@@ -25,7 +25,7 @@ def _(mo):
 
     The results reveal the fundamental limits of artificial memory in real conversations. Memory fades.
 
-    This interactive report expands the original research. Test how newer, open-source models perform. Hence "evergreen".
+    This interactive report expands the original research. Test how newer, open-source models perform. Hence **evergreen**.
     """
     )
     return
