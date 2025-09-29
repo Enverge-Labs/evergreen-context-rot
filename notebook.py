@@ -74,7 +74,7 @@ def _(mo):
 
     Ideally, models receive only relevant parts to focus on reasoning. Adding irrelevant context forces them to identify relevance first. The model performs two tasks simultaneously.
 
-    Given a chat history between user and LLM, the task is answering questions about parts of that history.
+    Given a chat history between user and LLM, the task is answering questions about parts of that history. See the tabs below for some examples of types of retrieval and context reasoning tasks.
 
     <br />
     """
