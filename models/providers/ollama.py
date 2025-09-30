@@ -1,24 +1,61 @@
 import os
-from openai import OpenAI
 from typing import Any
+
+from openai import OpenAI
+from pydantic import BaseModel
+
 from ..base_provider import BaseProvider
+
+
+class OllamaResponse(BaseModel):
+    answer: bool
 
 
 class OllamaProvider(BaseProvider):
 
     def process_single_prompt(
-        self, prompt: str, model_name: str, max_output_tokens: int, index: int
+        self, prompt: str, model_name: str, max_output_tokens: int, index: int, judge_mode: bool = False
     ) -> tuple[int, str]:
-        # Some models are more verbose than others. Prompt-force them to be concise.
-        prompt_ = (
-            prompt + " Be concise. Return the shortest possible, meaningful answer."
-        )
+
+        # Introduce a stricter "judge mode" because the output must be binary.
+        if judge_mode:
+            # WARNING: here be dragons
+            # In an attempt to make output more robust and consistent, I'm using JSON schema, but string interpolation
+            # has some caveats. The code below is a hacky workaround to get the schema into the prompt.
+            schema = OllamaResponse.model_json_schema()
+
+            system_prompt = """
+            This is a binary classification task. The possible answers are only "True" or "False". 
+
+            The output JSON should have this schema: {schema}
+            """.format(schema=schema)
+            system_prompt += """
+            EXAMPLE JSON OUTPUT:
+            {"answer": true}
+            """
+
+            messages = [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt},
+            ]
+            completion_kwargs = {
+                "response_format": {
+                    "type": "json_object"
+                }
+            }            
+        else:
+            messages = [
+                {"role": "user", "content": prompt},
+            ]
+            completion_kwargs = {}
+
         response = self.client.chat.completions.create(
             model=model_name,
             temperature=0,
             max_completion_tokens=max_output_tokens,
-            messages=[{"role": "user", "content": prompt_}],
+            messages=messages,
             stream=False,
+            **completion_kwargs
         )
 
         if response.choices and len(response.choices) > 0:

@@ -108,7 +108,7 @@ def _(create_enverge_placeholder):
 
 @app.cell
 def _(image):
-    output_filename = "images/enverge_placeholder.png"
+    output_filename = "images/placeholder.png"
     image.save(output_filename)
     return (output_filename,)
 

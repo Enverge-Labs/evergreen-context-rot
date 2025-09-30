@@ -7,3 +7,4 @@ black
 marimo>=0.14.7
 torch>=2.8.0
 ollama>=0.14.7
+pydantic==2.11.9

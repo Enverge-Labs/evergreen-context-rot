@@ -3,7 +3,7 @@ import marimo
 __generated_with = "0.14.7"
 app = marimo.App(
     width="medium",
-    app_title="Evergreen Context Rot",
+    app_title="Evergreen Context Rot - Playground",
     css_file="style.css",
 )
 

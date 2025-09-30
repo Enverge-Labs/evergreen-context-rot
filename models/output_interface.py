@@ -30,7 +30,7 @@ def marimo_output(mo) -> OutputFunction:
         def start_progress(self, total: int) -> None:
             if self.bar is None:
                 self.bar = self.mo.status.progress_bar(
-                    total=total, remove_on_exit=True
+                    total=total, remove_on_exit=False
                 ).__enter__()
 
         def update(self) -> None:

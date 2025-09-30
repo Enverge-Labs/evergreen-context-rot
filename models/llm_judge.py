@@ -86,6 +86,7 @@ class LLMJudge:
                     model_name=self.model_name,
                     max_output_tokens=100,
                     index=int(idx),
+                    judge_mode=True,
                 ): idx
                 for idx in indices_to_process
             }
@@ -98,6 +99,10 @@ class LLMJudge:
                     response = re.sub(
                         r"<think>.*?<\/think>", "", response, flags=re.DOTALL
                     ).strip()
+                    # Strip lonely <think> tags too
+                    response = re.sub(r"<think>", "", response).strip()
+                    response = str(json.loads(response)["answer"])
+
                     output_df.loc[idx_result, output_column_name] = response
 
                     success = not response.startswith("ERROR")
