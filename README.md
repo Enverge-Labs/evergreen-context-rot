@@ -5,6 +5,8 @@ Based on Ollama, this project is structured as a editable notebook + read-only a
 
 > See it in action here: [Evergreen Context Rot - Playground](https://lab.enverge.ai/notebook/sh5d1d09b1c4132b8150031b68d22604e3/)
 
+![Playground Demo](images/playground-demo.gif)
+
 ## Motivation
 
 Large Language Models are typically presumed to process context uniformly—that is, the model should handle the 10,000th token just as reliably as the 100th. However, in practice, this assumption does not hold. Model performance varies significantly as input length changes, even on simple tasks.
